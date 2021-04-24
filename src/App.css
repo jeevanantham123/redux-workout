@@ -14,7 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
