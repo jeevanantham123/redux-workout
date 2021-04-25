@@ -32,6 +32,7 @@ const { loginSuccess, logoutSuccess } = slice.actions;
 export const login = ({ username, password }) => async (dispatch) => {
   try {
     // await api.post('/api/auth/login/', { username, password })
+    console.log(username);
     dispatch(loginSuccess({ username }));
   } catch (e) {
     return console.error(e.message);

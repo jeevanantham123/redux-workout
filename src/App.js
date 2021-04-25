@@ -11,24 +11,24 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="flex h-14 items-center justify-center fixed top-0 w-full cursor-pointer bg-black">
-            <div className="w-96 py-1 h-full items-center flex justify-between font-semibold text-white">
-              <Link
+            <div className="w-96 py-1 h-full items-center flex justify-center font-semibold text-white">
+              {/* <Link
                 className="flex px-4 rounded-lg h-full items-center"
                 to="/react-redux"
               >
                 React Redux Sample
-              </Link>
+              </Link> */}
               <Link
                 className="flex px-4 rounded-lg h-full items-center"
                 to="/redux-toolkit"
               >
-                Redux toolkit Sample
+                Redux toolkit
               </Link>
             </div>
           </div>
           <header className="App-header">
             <Switch>
-              <Route path="/" exact component={SampleOne} />
+              <Route path="/" exact component={ReduxToolKitSample} />
               <Route path="/react-redux" component={SampleOne} />
               <Route path="/redux-toolkit" component={ReduxToolKitSample} />
             </Switch>

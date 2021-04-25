@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Field, Form, Formik } from "formik";
 import { login, logout } from "../store/User/slice";
+import { addTodo, deleteTodo, updateTodo } from "../store/Todo/saga";
 
 function ReduxToolKitSample() {
+  const [value, setvalue] = useState("");
+  const [index, setindex] = useState(null);
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
-
+  const { todos } = useSelector((state) => state.todo);
+  // console.log(user, todos);
   if (user) {
     return (
       <div className="flex flex-col text-black">
@@ -23,10 +27,10 @@ function ReduxToolKitSample() {
 
   return (
     <div>
-      <div className="text-lg font-medium text-black mb-6">
-        Welcome to Toolkit!
+      <div className="font-medium text-black mb-6 text-3xl">
+        Todo's using Toolkit!
       </div>
-      <Formik
+      {/* <Formik
         initialValues={{ username: "", password: "" }}
         onSubmit={(values) => {
           dispatch(login(values));
@@ -55,7 +59,86 @@ function ReduxToolKitSample() {
             </button>
           </Form>
         )}
-      </Formik>
+      </Formik> */}
+      <div className="flex mt-20 flex-row">
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => {
+            setvalue(e.target.value);
+          }}
+          className="w-100 border rounded-md text-black text-xl px-2 mr-1"
+        />
+        <div className="flex items-center">
+          <button
+            className={
+              index !== null && index >= 0
+                ? "w-20 self-center text-black rounded-lg bg-yellow-200 text-lg py-1 focus:outline-none"
+                : "w-28 self-center rounded-lg bg-blue-800 text-lg py-1 focus:outline-none"
+            }
+            onClick={(e) => {
+              e.preventDefault();
+              if (value !== "") {
+                index !== null && index >= 0
+                  ? dispatch(updateTodo(value, index))
+                  : dispatch(addTodo(value));
+              }
+              setvalue("");
+              setindex(null);
+            }}
+          >
+            {index !== null && index >= 0 ? "Update" : "Add"}
+          </button>
+          {index !== null && index >= 0 && (
+            <button
+              onClick={() => {
+                setindex(null);
+                setvalue("");
+              }}
+              className="focus:outline-none border-2 ml-1 border-black rounded-full w-7 flex items-center justify-center h-7 bg-red-500 text-white font-semibold text-base"
+            >
+              &#10005;
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="w-full mt-10">
+        {todos?.length ? (
+          <ul>
+            {todos.map((todo, index) => {
+              return (
+                <li
+                  className="flex justify-between py-2 border-b-2 border-black items-center"
+                  key={index}
+                >
+                  <div
+                    className="py-1 text-black text-xl cursor-pointer items-center"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setvalue(todos[index]);
+                      setindex(index);
+                    }}
+                  >
+                    {todo}
+                  </div>
+                  <button
+                    className="w-28 self-center rounded-lg bg-red-800 text-lg py-1 focus:outline-none"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // console.log("val", value);
+                      dispatch(deleteTodo(index));
+                      setindex(null);
+                      setvalue(null);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        ) : null}
+      </div>
     </div>
   );
 }
