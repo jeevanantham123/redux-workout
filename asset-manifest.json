@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/redux-workout/static/css/main.0befe582.chunk.css",
-    "main.js": "/redux-workout/static/js/main.14b4425a.chunk.js",
-    "main.js.map": "/redux-workout/static/js/main.14b4425a.chunk.js.map",
+    "main.css": "/redux-workout/static/css/main.3bf9d3c9.chunk.css",
+    "main.js": "/redux-workout/static/js/main.0579abcb.chunk.js",
+    "main.js.map": "/redux-workout/static/js/main.0579abcb.chunk.js.map",
     "runtime-main.js": "/redux-workout/static/js/runtime-main.f738771a.js",
     "runtime-main.js.map": "/redux-workout/static/js/runtime-main.f738771a.js.map",
     "static/js/2.c73fcf04.chunk.js": "/redux-workout/static/js/2.c73fcf04.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.4179389a.chunk.js": "/redux-workout/static/js/3.4179389a.chunk.js",
     "static/js/3.4179389a.chunk.js.map": "/redux-workout/static/js/3.4179389a.chunk.js.map",
     "index.html": "/redux-workout/index.html",
-    "static/css/main.0befe582.chunk.css.map": "/redux-workout/static/css/main.0befe582.chunk.css.map",
+    "static/css/main.3bf9d3c9.chunk.css.map": "/redux-workout/static/css/main.3bf9d3c9.chunk.css.map",
     "static/js/2.c73fcf04.chunk.js.LICENSE.txt": "/redux-workout/static/js/2.c73fcf04.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f738771a.js",
     "static/js/2.c73fcf04.chunk.js",
-    "static/css/main.0befe582.chunk.css",
-    "static/js/main.14b4425a.chunk.js"
+    "static/css/main.3bf9d3c9.chunk.css",
+    "static/js/main.0579abcb.chunk.js"
   ]
 }
