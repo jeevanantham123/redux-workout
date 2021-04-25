@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Field, Form, Formik } from "formik";
-import { login, logout } from "../store/User/slice";
+// import { Field, Form, Formik } from "formik";
+// import { login, logout } from "../store/User/slice";
 import { addTodo, deleteTodo, updateTodo } from "../store/Todo/saga";
 
 function ReduxToolKitSample() {
   const [value, setvalue] = useState("");
   const [index, setindex] = useState(null);
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.user);
+  // const { user } = useSelector((state) => state.user);
   const { todos } = useSelector((state) => state.todo);
   // console.log(user, todos);
-  if (user) {
-    return (
-      <div className="flex flex-col text-black">
-        Hi, {user.username}!
-        <button
-          className="flex self-center justify-center bg-red-500 mt-10 text-xl py-2 shadow-xl w-40  rounded-lg font-semibold focus:outline-none text-white"
-          onClick={() => dispatch(logout())}
-        >
-          Logout
-        </button>
-      </div>
-    );
-  }
+  // if (user) {
+  //   return (
+  //     <div className="flex flex-col text-black">
+  //       Hi, {user.username}!
+  //       <button
+  //         className="flex self-center justify-center bg-red-500 mt-10 text-xl py-2 shadow-xl w-40  rounded-lg font-semibold focus:outline-none text-white"
+  //         onClick={() => dispatch(logout())}
+  //       >
+  //         Logout
+  //       </button>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div>
