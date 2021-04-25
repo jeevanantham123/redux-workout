@@ -68,6 +68,7 @@ function ReduxToolKitSample() {
             setvalue(e.target.value);
           }}
           className="w-60 md:w-100 border rounded-md text-black text-xl px-2 mr-1"
+          required
         />
         <div className="flex items-center">
           <button
@@ -78,7 +79,7 @@ function ReduxToolKitSample() {
             }
             onClick={(e) => {
               e.preventDefault();
-              if (value !== "") {
+              if (value.length > 0 && value.trim() !== "") {
                 index !== null && index >= 0
                   ? dispatch(updateTodo(value, index))
                   : dispatch(addTodo(value));
@@ -128,7 +129,7 @@ function ReduxToolKitSample() {
                       // console.log("val", value);
                       dispatch(deleteTodo(index));
                       setindex(null);
-                      setvalue(null);
+                      setvalue("");
                     }}
                   >
                     Delete
