@@ -18,12 +18,12 @@ class App extends Component {
               >
                 React Redux Sample
               </Link> */}
-              <Link
+              <div
                 className="flex px-4 rounded-lg h-full items-center"
-                to="/redux-toolkit"
+                // to="/redux-toolkit"
               >
                 Redux toolkit
-              </Link>
+              </div>
             </div>
           </div>
           <header className="App-header">
