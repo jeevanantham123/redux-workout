@@ -29,7 +29,7 @@ class App extends Component {
           <header className="App-header">
             <Switch>
               <Route path="/" exact component={ReduxToolKitSample} />
-              <Route path="/redux-toolkit" component={ReduxToolKitSample} />
+              <Route path="/redux-workout" component={ReduxToolKitSample} />
               <Route path="/react-redux" component={SampleOne} />
               <Route path="/redux-toolkit" component={ReduxToolKitSample} />
             </Switch>
