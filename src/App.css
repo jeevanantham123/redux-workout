@@ -14,9 +14,8 @@
 }
 
 .App-header {
-  --tw-bg-opacity: 1;
   padding-top: 100px;
-  background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+  background-color: #61dafb;
   min-height: 100vh;
   overflow-y: scroll;
   display: flex;
