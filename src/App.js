@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import SampleOne from "./Samples/ReactReduxSample";
 import ReduxToolKitSample from "./Samples/ReduxToolKit";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 class App extends Component {
   render() {
     return (

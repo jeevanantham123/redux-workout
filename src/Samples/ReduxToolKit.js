@@ -67,14 +67,14 @@ function ReduxToolKitSample() {
           onChange={(e) => {
             setvalue(e.target.value);
           }}
-          className="w-100 border rounded-md text-black text-xl px-2 mr-1"
+          className="w-60 md:w-100 border rounded-md text-black text-xl px-2 mr-1"
         />
         <div className="flex items-center">
           <button
             className={
               index !== null && index >= 0
                 ? "w-20 self-center text-black rounded-lg bg-yellow-200 text-lg py-1 focus:outline-none"
-                : "w-28 self-center rounded-lg bg-blue-800 text-lg py-1 focus:outline-none"
+                : "w-20 md:w-28 self-center rounded-lg bg-blue-800 text-lg py-1 focus:outline-none"
             }
             onClick={(e) => {
               e.preventDefault();
@@ -102,7 +102,7 @@ function ReduxToolKitSample() {
           )}
         </div>
       </div>
-      <div className="w-full mt-10">
+      <div className="w-full px-4 md:px-0 mt-10">
         {todos?.length ? (
           <ul>
             {todos.map((todo, index) => {
@@ -122,7 +122,7 @@ function ReduxToolKitSample() {
                     {todo}
                   </div>
                   <button
-                    className="w-28 self-center rounded-lg bg-red-800 text-lg py-1 focus:outline-none"
+                    className="w-20 md:w-28 self-center rounded-lg bg-red-800 text-lg py-1 focus:outline-none"
                     onClick={(e) => {
                       e.preventDefault();
                       // console.log("val", value);
