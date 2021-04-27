@@ -74,8 +74,8 @@ function ReduxToolKitSample() {
           <button
             className={
               index !== null && index >= 0
-                ? "w-20 self-center text-black rounded-lg bg-yellow-200 text-lg py-1 focus:outline-none"
-                : "w-20 md:w-28 self-center rounded-lg bg-blue-800 text-lg py-1 focus:outline-none"
+                ? "w-20 self-center text-black rounded-lg bg-yellow-200 text-lg py-1 focus:outline-none font-medium"
+                : "w-20 md:w-28 self-center rounded-lg bg-blue-800 text-lg py-1 focus:outline-none font-medium"
             }
             onClick={(e) => {
               e.preventDefault();
@@ -103,7 +103,7 @@ function ReduxToolKitSample() {
           )}
         </div>
       </div>
-      <div className="w-full px-4 md:px-0 mt-10">
+      <div className="w-full px-4 md:px-0 mt-10 min-h-100 mb-20 overflow-y-scroll">
         {todos?.length ? (
           <ul>
             {todos.map((todo, index) => {
@@ -123,7 +123,7 @@ function ReduxToolKitSample() {
                     {todo}
                   </div>
                   <button
-                    className="w-20 md:w-28 self-center rounded-lg bg-red-800 text-lg py-1 focus:outline-none"
+                    className="w-20 md:w-28 font-medium self-center rounded-lg bg-red-500 text-lg py-1 focus:outline-none"
                     onClick={(e) => {
                       e.preventDefault();
                       // console.log("val", value);

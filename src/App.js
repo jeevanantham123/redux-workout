@@ -3,7 +3,7 @@ import "./App.css";
 import React, { Component } from "react";
 import SampleOne from "./Samples/ReactReduxSample";
 import ReduxToolKitSample from "./Samples/ReduxToolKit";
-
+import github from "./images/github.png";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 class App extends Component {
   render() {
@@ -34,6 +34,26 @@ class App extends Component {
               <Route path="/redux-toolkit" component={ReduxToolKitSample} />
             </Switch>
           </header>
+        </div>
+        <div className="fixed mt-20 bottom-0 h-8 md:h-10 bg-white w-full justify-center items-center flex">
+          <span className="text-xl flex items-center font-bold">
+            &#169;
+            <span className="font-semibold text-base mr-2">
+              opyRight&nbsp;&nbsp;2021
+            </span>
+          </span>
+          /
+          <a
+            href="https://github.com/jeevanantham123"
+            className="ml-2 flex items-center"
+          >
+            <img
+              src={github}
+              className="h-6 w-6 md:h-8 md:w-8 mr-2"
+              alt="github"
+            ></img>
+            <span className="font-medium">jeevanantham123</span>
+          </a>
         </div>
       </Router>
     );
