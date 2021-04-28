@@ -24,6 +24,15 @@ class App extends Component {
               >
                 Redux toolkit
               </div>
+              <div className="absolute right-1">
+                <a
+                  href="https://github.com/jeevanantham123"
+                  className="flex items-center bg-white p-1 rounded-md"
+                >
+                  <img src={github} className="h-8 w-8" alt="github"></img>
+                  {/* <span className="font-medium">jeevanantham123</span> */}
+                </a>
+              </div>
             </div>
           </div>
           <header className="App-header">
@@ -34,26 +43,6 @@ class App extends Component {
               <Route path="/redux-toolkit" component={ReduxToolKitSample} />
             </Switch>
           </header>
-        </div>
-        <div className="fixed mt-20 bottom-0 h-8 md:h-10 bg-white w-full justify-center items-center flex">
-          <span className="text-xl flex items-center font-bold">
-            &#169;
-            <span className="font-semibold text-base mr-2">
-              opyRight&nbsp;&nbsp;2021
-            </span>
-          </span>
-          /
-          <a
-            href="https://github.com/jeevanantham123"
-            className="ml-2 flex items-center"
-          >
-            <img
-              src={github}
-              className="h-6 w-6 md:h-8 md:w-8 mr-2"
-              alt="github"
-            ></img>
-            <span className="font-medium">jeevanantham123</span>
-          </a>
         </div>
       </Router>
     );
